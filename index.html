@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CR Cars</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./src/CSS/styles.css">
+</head>
+<body>
+    <header>
+        <h1>CR Cars</h1>
+    </header>
+    <main>
+        <section class="products">
+            <!-- Produto 1 -->
+            <div class="product">
+                <h2>Mitsubishi Eclipse</h2>
+                <img src="./src/imagens/product2 jpg.jpg" alt="Mitsubishi Eclipse">
+                <p>Valor: $62.90</p>
+                <button onclick="addToCart('Mitsubishi Eclipse', 62.90)">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Produto 2 -->
+            <div class="product">
+                <h2>Dodge Charger</h2>
+                <img src="./src/imagens/product2.jpg" alt="Dodge Charger">
+                <p>Valor: $69.90</p>
+                <button onclick="addToCart('Dodge Charger', 69.90)">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Adicione mais produtos aqui -->
+            <div class="product">
+                <h2>Nissan Skyline</h2>
+                <img src="./src/imagens/product3.jpg" alt="Nissan Skyline">
+                <p>Valor: $70.90</p>
+                <button onclick="addToCart('Nissan Skyline', 70.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <h2>Honda Civic</h2>
+                <img src="./src/imagens/product4.jpg" alt="Honda Civic">
+                <p>Valor: $89.90</p>
+                <button onclick="addToCart('Honda Civic', 89.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <h2>Toyota Supra</h2>
+                <img src="./src/imagens/product5.jpg" alt="Toyota Supra">
+                <p>Valor: $100.00</p>
+                <button onclick="addToCart('Toyota Supra', 100.00)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <h2>Nissan Skyline Blue</h2>
+                <img src="./src/imagens/product6.jpg" alt="Nissan Skyline Blue">
+                <p>Valor: $69.90</p>
+                <button onclick="addToCart('Nissan Skyline Blue', 69.90)">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+        <!-- Carrinho de Compras -->
+        <section class="cart" id="cart">
+            <div class="cart-header" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+    <div id="cart-items"></div>
+    <div class="cart-total" id="cart-total">Total: $0.00</div>
+    
+
+    <div class="coupon-section">
+        <label for="coupon">Cupom de desconto:</label>
+        <input type="text" id="coupon" placeholder="Digite seu cupom">
+        <button onclick="applyCoupon()">Aplicar Cupom</button>
+        <div id="coupon-applied" style="display: none; color: green; font-weight: bold;">Cupom aplicado!</div>
+        <div id="discount-amount" style="display: none; color: green; font-weight: bold;"></div>
+    </div>
+
+    <button class="ConcluirCompra" onclick="completePurchase()">Concluir Compra</button>
+    <div id="purchase-message" style="display: none; color: green; font-weight: bold; margin-top: 10px;">
+        Compra concluída! Obrigado por comprar conosco.
+    </div>
+    
+    
+</section>
+    </main>
+    <footer>
+        <p>&copy; by Cristian Oliveira</p>
+    </footer>
+
+<script src="./src/JS/index.js"></script>
+
+</body>
+</html>
